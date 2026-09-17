@@ -1,0 +1,17 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Chainguard nginx Demo</title><link rel="stylesheet" href="/style.css"></head>
+<body><main><h1>Welcome to Chainguard!</h1><p class="subtitle">Migrated: Chainguard nginx image</p>
+<div class="grid">
+<div class="card"><div class="label">Image</div><div class="value">cgr.dev/chainguard/nginx:latest</div></div>
+<div class="card"><div class="label">Registry</div><div class="value">Chainguard Registry</div></div>
+<div class="card"><div class="label">Container Port</div><div class="value">8080</div></div>
+<div class="card"><div class="label">Runtime</div><div class="value">Non-root / minimal</div></div>
+</div>
+<button id="scan" onclick="scan('chainguard')">Scan this image with Trivy</button><span id="status" class="status">Not scanned</span>
+<div class="results">
+<div class="card"><div class="label">Total</div><div id="total" class="value">—</div></div>
+<div class="card"><div class="label">Critical</div><div id="critical" class="value">—</div></div>
+<div class="card"><div class="label">High</div><div id="high" class="value">—</div></div>
+<div class="card"><div class="label">Medium</div><div id="medium" class="value">—</div></div>
+<div class="card"><div class="label">Low</div><div id="low" class="value">—</div></div>
+</div><p class="note">Results are generated live by Trivy against the exact image ID pulled when the demo started.</p>
+<script src="/app.js"></script></main></body></html>
